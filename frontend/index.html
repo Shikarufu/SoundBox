@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soundbox - Music Player</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <body>
+      <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <h2 class="logo">♫ SoundBox</h2>
+
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Your Library</a>
+            <a href="#">Favorites</a>
+          </nav>
+
+          <div class="playlists">
+            <h3>Your Playlists</h3>
+            <a href="#">My Playlist</a>
+            <a href="#">Chill Music</a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+          <header class="topbar">
+            <h2>Good evening</h2>
+
+            <input type="text" placeholder="Search music..." />
+          </header>
+
+          <!-- Music Library -->
+          <section class="music-library">
+            <div class="library-header">
+              <h2>Your Music</h2>
+
+              <label for="musicInput" class="upload-btn"> + Add Music </label>
+
+              <input
+                type="file"
+                id="musicInput"
+                accept="audio/*"
+                multiple
+                hidden
+              />
+            </div>
+
+            <!-- Drag and Drop -->
+            <div class="drop-zone" id="dropZone">
+              <h3>Drop your music here</h3>
+              <p>Or click Add Music to browse files</p>
+            </div>
+
+            <!-- Song List -->
+            <div class="song-list">
+              <h2>My Library</h2>
+
+              <div id="songContainer">
+                <p class="empty-message">No music added yet.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Music Player -->
+          <footer class="player">
+            <div class="song-info">
+              <h4 id="currentTitle">No song selected</h4>
+              <p id="currentArtist">Unknown Artist</p>
+            </div>
+
+            <div class="player-center">
+              <div class="player-controls">
+                <button id="shuffleBtn" title="Shuffle">🔀</button>
+                <button id="previousBtn">⏮</button>
+                <button id="playBtn">▶</button>
+                <button id="nextBtn">⏭</button>
+                <button id="repeatBtn" title="Repeat">🔁</button>
+              </div>
+
+              <div class="progress-container">
+                <span id="currentTime">0:00</span>
+
+                <input
+                  type="range"
+                  id="progressBar"
+                  min="0"
+                  max="100"
+                  value="0"
+                />
+
+                <span id="duration">0:00</span>
+              </div>
+            </div>
+
+            <div class="volume">
+              <span>🔊</span>
+
+              <input
+                type="range"
+                id="volumeControl"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+            </div>
+          </footer>
+        </main>
+        <nav class="mobile-nav">
+          <a href="#" class="nav-active">
+            <span>⌂</span>
+            <small>Home</small>
+          </a>
+
+          <a href="#">
+            <span>♫</span>
+            <small>Library</small>
+          </a>
+
+          <a href="#">
+            <span>♡</span>
+            <small>Favorites</small>
+          </a>
+        </nav>
+      </div>
+
+      <script src="js/script.js"></script>
+    </body>
+  </body>
+</html>
